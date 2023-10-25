@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    width: 10rem;
+    height: 3rem;
+  }
+  button {
+    display: flex;
+    margin: auto;
+    color: white;
+    border: white;
+    background: rgba(220, 110, 47, 0.69);
+    gap: 3rem;
+    height: 2rem;
+    width: 5rem;
+  }
+  .header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    font-weight: bold;
+  }
+  .header-menu > li:hover {
+    cursor: pointer;
+    color: var(--orange);
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    position: relative;
+    .header > :nth-child(2) {
+      position: absolute;
+      right: 2rem;
+      z-index: 99;
+    }
+    .header-menu {
+      position: absolute;
+      flex-direction: column;
+      background-color: var(--appColor);
+      padding: 2rem;
+      right: 0;
+      z-index: 10;
+    }
+    .bars {
+      float: left;
+    }
+  }
+}
